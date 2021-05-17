@@ -1,6 +1,6 @@
-#Best Practices for a Nodejs Project
+##Best Practices for a Nodejs Project
 
-#Database setup
+##Database setup
 ````mysql
 create database sampleblogdb;
 CREATE USER 'samplebloguser'@'localhost' IDENTIFIED BY  'sampleblogpass';

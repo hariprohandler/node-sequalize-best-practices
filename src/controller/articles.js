@@ -14,7 +14,7 @@ async function createArticle (title, content, authorId) {
     }
 
     try {
-         await Article.create({
+         return await Article.create({
              title, content, authorId
          })
      } catch(e) {
@@ -24,12 +24,16 @@ async function createArticle (title, content, authorId) {
 
 async function fetchArticles() {
     try{
-        const articles = await Article.findAll()
-        return articles;
+        return await Article.findAll({
+            include:[
+                {model: Users, attributes: ['username']}
+            ]
+        })
     }catch (e) {
         throw e
     }
 }
 module.exports = {
-    createArticle
+    createArticle,
+    fetchArticles
 }

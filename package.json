@@ -4,7 +4,9 @@
   "description": "Best Practices for node js project",
   "main": "src/run.js",
   "scripts": {
+    "seed": "node scripts/seed_sampledata.js",
     "start": "node src/run.js",
+    "start:resetdb": "FORCE_DB_RESET=true node src/run.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
