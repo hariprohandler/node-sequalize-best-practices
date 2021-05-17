@@ -26,7 +26,7 @@ async function fetchArticles() {
     try{
         return await Article.findAll({
             include:[
-                {model: Users, attributes: ['username']}
+                {model: Users, as: 'author', attributes: ['username']}
             ]
         })
     }catch (e) {

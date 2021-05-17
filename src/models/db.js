@@ -3,7 +3,8 @@ const  DT = Sequelize.DataTypes
 const db = new Sequelize('sampleblogdb', 'samplebloguser', 'sampleblogpass', {
     host: 'localhost',
     dialect: 'mysql', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-    port: 3306
+    port: 3306,
+    logging: false
 })
 
 const Users = db.define('user', {
